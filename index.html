@@ -229,53 +229,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-
-<p>本篇文章给大家带来的内容是java中什么是JVM？Java虚拟机的简单介绍，让大家了解JVM可以做什么，JVM的作用。有一定的参考价值，有需要的朋友可以参考一下，希望对你们有所帮助。</p>
-<p>什么是JVM？</p>
-<p>Java虚拟机（JVM）是运行Java字节码的虚拟机，它是java编程语言的核心。当我们运行程序时，JVM负责将字节代码转换为特定于机器的代码。JVM还依赖于平台，并提供核心Java函数，如内存管理，垃圾收集，安全性等。</p>
-<p>JVM被称为虚拟，因为它提供的接口不依赖于底层操作系统和机器硬件。这种与硬件和操作系统的独立性使得java程序可以在任何地方进行一次写入。</p>
-<p>在现实世界中，JVM是一种规范，它提供了一个可以执行Java字节码的运行时环境。</p>
-<p>JVM可以做什么？</p>
-<p>JVM执行以下操作：</p>
-<p>1、加载代码</p>
-<p>2、验证代码</p>
-<p>3、执行代码</p>
-<p>3、提供运行时环境</p>
-<p>JVM提供以下定义：</p>
-<p>1、记忆区</p>
-<p>2、类文件格式</p>
-<p>3、注册集</p>
-<p>4、垃圾收集堆</p>
-<p>5、致命错误报告等</p>
-<p>JVM架构</p>
-<p>让我们来了解一下JVM的内部架构。它包含有类加载器，内存区域，执行引擎等。</p>
-<p>JVM-Architecture.png</p>
-<p>1、类加载器</p>
-<p>Classloader是JVM的子系统，用于加载类文件。每当我们运行java程序时，它首先由类加载器加载。Java中有三个内置的类加载器。</p>
-<p>1）、Bootstrap ClassLoader：这是第一个类扩展，它是Extension类加载器的超类。它加载rt.jar文件，该文件包含Java Standard Edition的所有类文件，如java.lang包类，java.net包类，java.util包类，java.io包类，java.sql包类等。</p>
-<p>2）、Extension ClassLoader：这是Bootstrap的子类加载器和System类加载器的父类加载器。它遍历位于$ JAVA_HOME / jre / lib / ext目录中的jar文件。</p>
-<p>3）、System / Application ClassLoader：这是Extension类加载器的子类加载器。它从类路径加载类文件。默认情况下，classpath设置为当前目录。您可以使用“-cp”或“-classpath”开关更改类路径。它也被称为Application类加载器。</p>
-<p>2、类（方法）区域</p>
-<p>Method区域存储每类结构，例如运行时常量池，字段和方法数据，方法的代码。</p>
-<p>3、堆</p>
-<p>Heap是分配对象的运行时数据区域。</p>
-<p>4、堆叠</p>
-<p>Java 堆叠存储帧。Stack包含局部变量和部分结果，并在方法调用和返回中起作用。</p>
-<p>每个线程都有一个私有JVM堆栈，与线程同时创建。</p>
-<p>每次调用方法时都会创建一个新帧。当方法调用完成时，框架将被销毁。</p>
-<p>5、程序计数器寄存器（Program Counter Register）</p>
-<p>PC（Program Counter）寄存器包含当前正在执行的Java虚拟机指令的地址。</p>
-<p>6、原生方法堆栈（Native Method Stack）</p>
-<p>它包含应用程序中使用的所有本机方法。</p>
-<p>7、执行引擎（Execution Engine）</p>
-<p>它包含：</p>
-<p>1）、虚拟处理器</p>
-<p>2）、解释器：读取字节码流然后执行指令。</p>
-<p>3）、实时（JIT）编译器：用于提高性能。JIT同时编译具有类似功能的部分字节代码，因此减少了编译所需的时间。这里，术语“编译器”指的是从Java虚拟机（JVM）的指令集到特定CPU的指令集的转换器。</p>
-<p>8、Java本地接口（Java Native Interface）</p>
-<p>Java Native Interface（JNI）是一个框架，它提供了一个接口，用于与另一种语言（如C，C ++，Assembly等）编写的另一个应用程序进行通信.Java使用JNI框架将输出发送到控制台或与OS库交互。</p>
-
+    <p>什么是java虚拟机？ </p>
+    
+    <a class="article-more-a" href="/2020/05/02/%E4%BB%80%E4%B9%88%E6%98%AFjava%E8%99%9A%E6%8B%9F%E6%9C%BA/#more">more >></a>
+    
     
 
     
@@ -349,15 +306,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-
-<p>1.一个java源文件当中可以定义多个class</p>
-<p>2.一个java源文件当中public的class不是必须的</p>
-<p>3.一个class会定义生成一个xxx.class字节码文件</p>
-<p>4.一个java源文件当中定义公开的类的话，只能有一个，并且该类名称必须和java源文件名称一致。</p>
-<p>5.每一个class当中都可以编写main方法，都可以设定程序的入口，想执行B.class中的main方法：java B,想执行X.class当中的main方法： java X</p>
-<p><a href="https://blog.csdn.net/jingzi123456789/article/details/71515728" target="_blank" rel="noopener">https://blog.csdn.net/jingzi123456789/article/details/71515728</a></p>
-
+    <p>JAVA中类的public class与class的区别详解</p>
+    
+    <a class="article-more-a" href="/2020/05/02/JAVA%E4%B8%AD%E7%B1%BB%E7%9A%84public%20class%E4%B8%8Eclass%E7%9A%84%E5%8C%BA%E5%88%AB%E8%AF%A6%E8%A7%A3%20/#more">more >></a>
+    
     
 
     
